@@ -12,7 +12,7 @@ export default function Hero() {
         transition={{ duration: 1.8, ease: 'easeOut' }}
       >
        <img
-  src="/images/beauty/3Y3A8551-Edit-2-2.JPG"
+  src="/images-optimized/beauty/3Y3A8551-Edit-2-2.webp"
   alt="Michelle Anorchie fashion portrait"
 />
       </motion.div>

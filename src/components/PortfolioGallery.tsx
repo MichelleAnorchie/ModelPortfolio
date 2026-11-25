@@ -13,38 +13,38 @@ type Photo = {
 const photos: Photo[] = [
   // Beauty portraits
   ...[
-    '3Y3A8548-Edit.JPG',
-    '3Y3A8551-Edit-2-2.JPG',
-    '3Y3A8556-Edit22.JPG',
-    '3Y3A8536-Edit-2.JPG',
-    '3Y3A8538-Edit.JPG',
-    '3Y3A8557-Edit-2.jpg',
-    '3Y3A8527-Edit.JPG',
-    '3Y3A8532-Edit.JPG',
-    '3Y3A8535-Edit-2.JPG',
-    '3Y3A8571-Edit.JPG',
-    '3Y3A8581-Edit.JPG',
-    '3Y3A8573-Edit.JPG',
+    '3Y3A8548-Edit.webp',
+    '3Y3A8551-Edit-2-2.webp',
+    '3Y3A8556-Edit22.webp',
+    '3Y3A8536-Edit-2.webp',
+    '3Y3A8538-Edit.webp',
+    '3Y3A8557-Edit-2.webp',
+    '3Y3A8527-Edit.webp',
+    '3Y3A8532-Edit.webp',
+    '3Y3A8535-Edit-2.webp',
+    '3Y3A8571-Edit.webp',
+    '3Y3A8581-Edit.webp',
+    '3Y3A8573-Edit.webp',
   ].map((file) => ({
-    src: `/images/beauty/${file}`,
+    src: `/images-optimized/beauty/${file}`,
     category: 'Beauty' as Category,
   })),
 
   // Full-body photographs
   {
-    src: '/images/full-body/KAY_9647.jpg',
+    src: '/images-optimized/full-body/KAY_9647.webp',
     category: 'Full-body',
   },
 
   // Model digitals
   ...[
-    'KAY_9648.jpg',
-    'KAY_9653.jpg',
-    'KAY_9655.jpg',
-    'KAY_9647.jpg',
-    'KAY_9649.jpg',
+    'KAY_9648.webp',
+    'KAY_9653.webp',
+    'KAY_9655.webp',
+    'KAY_9647.webp',
+    'KAY_9649.webp',
   ].map((file) => ({
-    src: `/images/digitals/${file}`,
+    src: `/images-optimized/digitals/${file}`,
     category: 'Digitals' as Category,
   })),
 ]
@@ -158,7 +158,11 @@ export default function PortfolioGallery() {
               whileHover={{ y: -5 }}
               aria-label={`View ${photo.category} photograph ${index + 1}`}
             >
-              <img src={photo.src} alt={`${photo.category} modelling photograph`} />
+              <img src={photo.src} 
+               alt={`${photo.category} modelling photograph`}
+               loading="lazy"
+               decoding="async"
+               />
 
               <span className="gallery-item-overlay">
                 VIEW IMAGE

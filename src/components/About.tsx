@@ -16,7 +16,7 @@ export default function About() {
     <section className="about-section" id="about">
       <div className="about-image">
         <img
-          src="/images/full-body/KAY_9647.jpg"
+          src="/images-optimized/full-body/KAY_9647.webp"
           alt="Michelle Anorchie modelling portrait"
         />
       </div>
