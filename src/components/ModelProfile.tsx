@@ -1,3 +1,4 @@
+import CompCard from './CompCard'
 
 export default function ModelProfile() {
   const measurements = [
@@ -30,6 +31,11 @@ export default function ModelProfile() {
           </div>
         ))}
       </div>
+
+        <div className="comp-card-action">
+         <CompCard />
+        </div>
+
     </section>
   )
 }
