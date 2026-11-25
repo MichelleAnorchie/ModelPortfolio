@@ -1,6 +1,3 @@
-
-import { jsPDF } from 'jspdf'
-
 const photos = {
   beauty: '/images-optimized/beauty/3Y3A8551-Edit-2-2.webp',
   fullBody: '/images-optimized/full-body/KAY_9647.webp',
@@ -28,7 +25,8 @@ async function loadImage(src: string): Promise<string> {
 
 export default function CompCard() {
   const downloadCompCard = async () => {
-    try {
+  try {
+    const { jsPDF } = await import('jspdf')
       const [beauty, fullBody, digitals] = await Promise.all([
         loadImage(photos.beauty),
         loadImage(photos.fullBody),

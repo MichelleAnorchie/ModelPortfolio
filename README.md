@@ -1,75 +1,218 @@
-# React + TypeScript + Vite
+# Michelle Anorchie – Model Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive modelling portfolio website designed to showcase professional modelling photographs, personal profile information, measurements, and contact details.
 
-Currently, two official plugins are available:
+- **Live Website:** [model-portfolio-coral.vercel.app](https://model-portfolio-coral.vercel.app/)
+- **Repository:** [GitHub – ModelPortfolio](https://github.com/MichelleAnorchie/ModelPortfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**ModelPortfolio** is a personal modelling portfolio website developed to provide a professional online presence for model Michelle Anorchie.
 
-## Expanding the ESLint configuration
+The website combines an elegant editorial-inspired design with interactive components, responsive layouts, image optimisation, and downloadable PDF functionality. The project was developed as a full front-end web application, with an emphasis on visual presentation, usability, responsive design, and performance.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Responsive Design
+- Responsive layouts for desktop, tablet, and mobile devices.
+- Mobile-friendly navigation menu.
+- Consistent visual presentation across screen sizes.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Interactive Portfolio Gallery
+- Dedicated **Beauty**, **Full-body**, and **Digitals** categories.
+- Category-based image filtering.
+- Full-screen image viewer (lightbox) with previous and next image navigation.
+- Smooth transitions and hover animations.
 
+### 3. Model Profile
+- Dedicated model information section.
+- Height and body measurements.
+- Dress and shoe sizes.
+- Location information.
+
+### 4. Downloadable Comp Card
+- Generates a two-page PDF comp card.
+- Includes selected modelling photographs.
+- Displays model measurements and contact information.
+- Allows visitors to download the document directly from the website.
+
+### 5. About and Contact Sections
+- Personal introduction and professional modelling categories.
+- Direct email contact.
+- Instagram profile link.
+
+### 6. Performance and User Experience
+- Optimised WebP images and lazy loading for gallery images.
+- Smooth scrolling and animations.
+- Custom favicon and SEO metadata.
+
+---
+
+## Screenshots
+
+*Screenshots of the application will be added here to demonstrate the website’s desktop and mobile interfaces.*
+
+---
+
+## Technology Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **React** | Component-based user interface |
+| **TypeScript** | Type safety and maintainable code |
+| **Vite** | Development server and build tool |
+| **CSS3** | Styling and responsive layouts |
+| **Motion** | UI animations and transitions |
+| **Lucide React** | Interface icons |
+| **jsPDF** | PDF comp card generation |
+| **Sharp** | Image optimisation |
+| **Vercel** | Application deployment |
+| **Git & GitHub** | Version control and source code management |
+
+---
+
+## Design Approach
+
+The website follows a **dark luxury editorial aesthetic** inspired by modern fashion and modelling portfolios.
+
+**Visual Direction:**
+- Black backgrounds with champagne-gold accents.
+- Elegant serif typography.
+- Minimal layouts with generous spacing.
+- Subtle transitions and animations.
+
+The design prioritises the photography while keeping navigation and model information easily accessible.
+
+---
+
+## Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+- Node.js
+- npm
+- Git
+
+### Installation & Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MichelleAnorchie/ModelPortfolio.git
+   ```
+
+2. **Navigate into the project directory**
+   ```bash
+   cd ModelPortfolio
+   ```
+
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   *Open the local URL displayed in your terminal to view the application.*
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+6. **Preview the production build**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## Project Structure
+
+```text
+ModelPortfolio/
+│
+├── public/
+│   ├── images/
+│   │   ├── beauty/
+│   │   ├── digitals/
+│   │   └── full-body/
+│   │
+│   ├── images-optimized/
+│   │   ├── beauty/
+│   │   ├── digitals/
+│   │   └── full-body/
+│   │
+│   ├── favicon.svg
+│   └── icons.svg
+│
+├── scripts/
+│   └── optimize-images.mjs
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── CompCard.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── ModelProfile.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── PortfolioGallery.tsx
+│   │   └── PortfolioGallery.css
+│   │
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The application is deployed using **Vercel** and connected directly to the GitHub repository. Changes pushed to the configured deployment branch automatically trigger new deployments.
 
-```
+- **Live Application:** [https://model-portfolio-coral.vercel.app/](https://model-portfolio-coral.vercel.app/)
+
+---
+
+## Future Improvements
+
+Potential future enhancements include:
+- Additional portfolio categories.
+- Improved accessibility and keyboard navigation.
+- Further performance optimisation.
+- Additional interactive portfolio features.
+- Enhanced PDF comp card customisation.
+
+---
+
+## Author
+
+**Michelle Anorchie**
+- **GitHub:** [@MichelleAnorchie](https://github.com/MichelleAnorchie)
+- **Instagram:** [@mimy_michelle](https://instagram.com/mimy_michelle)
+
+---
+
+*Developed as a personal modelling portfolio and front-end development project.*
