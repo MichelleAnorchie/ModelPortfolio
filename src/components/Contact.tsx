@@ -15,10 +15,14 @@ export default function Contact() {
       </motion.p>
 
       <motion.h2
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
+        initial={{ opacity: 0, y: 45 }}
+         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{
+        duration: 1,
+         ease: [0.22, 1, 0.36, 1],
+     }}
+>
         Let's create
         <br />
         <span>something beautiful.</span>

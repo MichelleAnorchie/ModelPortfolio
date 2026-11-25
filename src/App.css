@@ -512,3 +512,16 @@ main {
 .contact-social:hover {
   color: #d6c5a5;
 }
+
+/* NAVBAR SCROLL EFFECT */
+
+.navbar {
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(8, 8, 8, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(214, 197, 165, 0.15);
+}

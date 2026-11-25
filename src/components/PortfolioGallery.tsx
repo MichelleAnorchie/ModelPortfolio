@@ -24,7 +24,6 @@ const photos: Photo[] = [
     '3Y3A8535-Edit-2.webp',
     '3Y3A8571-Edit.webp',
     '3Y3A8581-Edit.webp',
-    '3Y3A8573-Edit.webp',
   ].map((file) => ({
     src: `/images-optimized/beauty/${file}`,
     category: 'Beauty' as Category,
@@ -152,10 +151,15 @@ export default function PortfolioGallery() {
               className="gallery-item"
               onClick={() => setSelectedPhoto(index)}
               initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5, delay: index * 0.035 }}
-              whileHover={{ y: -5 }}
+              whileHover={{
+              y: -5,
+             scale: 1.02,
+             transition: { duration: 0.4, ease: 'easeOut' },
+}}
               aria-label={`View ${photo.category} photograph ${index + 1}`}
             >
               <img src={photo.src} 
@@ -180,6 +184,7 @@ export default function PortfolioGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={closeViewer}
           >
             <button
@@ -206,9 +211,9 @@ export default function PortfolioGallery() {
               src={filteredPhotos[selectedPhoto].src}
               alt="Selected modelling photograph"
               className="lightbox-image"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.35 }}
+              initial={{ opacity: 0, scale: 0.95, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               onClick={(event) => event.stopPropagation()}
             />
 

@@ -1,10 +1,22 @@
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
+ useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50)
+  }
+
+  window.addEventListener('scroll', handleScroll)
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll)
+  }
+}, [])
   const navigation = [
     { name: 'HOME', href: '#home' },
     { name: 'PORTFOLIO', href: '#portfolio' },
@@ -13,7 +25,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="navbar">
+    <header className={scrolled ? 'navbar scrolled' : 'navbar'}>
       <a href="#home" className="logo">
         M<span>.</span>
       </a>

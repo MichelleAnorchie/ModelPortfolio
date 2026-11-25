@@ -16,18 +16,21 @@ export default function About() {
     <section className="about-section" id="about">
       <div className="about-image">
         <img
-          src="/images-optimized/full-body/KAY_9647.webp"
+          src="/images-optimized/beauty/3Y3A8556-Edit22.webp"
           alt="Michelle Anorchie modelling portrait"
         />
       </div>
 
       <motion.div
         className="about-content"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+        duration: 1,
+        ease: [0.22, 1, 0.36, 1],
+        }}
+    >
         <p className="section-label">GET TO KNOW ME</p>
 
         <h2>

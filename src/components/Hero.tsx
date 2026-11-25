@@ -54,11 +54,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      <div className="hero-index">
-        <span>01</span> / 05
-      </div>
-
       
     </section>
   )
