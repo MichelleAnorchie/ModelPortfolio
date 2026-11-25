@@ -17,12 +17,13 @@ export default function Navbar() {
     window.removeEventListener('scroll', handleScroll)
   }
 }, [])
-  const navigation = [
-    { name: 'HOME', href: '#home' },
-    { name: 'PORTFOLIO', href: '#portfolio' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'CONTACT', href: '#contact' },
-  ]
+ const navigation = [
+  { name: 'HOME', href: '#home' },
+  { name: 'PORTFOLIO', href: '#portfolio' },
+  { name: 'ABOUT', href: '#about' },
+  { name: 'MODEL PROFILE', href: '#model-profile' },
+  { name: 'CONTACT', href: '#contact' },
+]
 
   return (
     <header className={scrolled ? 'navbar scrolled' : 'navbar'}>

@@ -525,3 +525,116 @@ main {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(214, 197, 165, 0.15);
 }
+
+
+/* MODEL PROFILE SECTION */
+
+.model-profile {
+  padding: 130px 10%;
+  background: #080808;
+  color: #f5f0e8;
+  text-align: center;
+}
+
+.model-profile-header {
+  margin-bottom: 70px;
+}
+
+.model-profile-header .section-label {
+  color: #d6c5a5;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.model-profile-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 400;
+  margin: 18px 0;
+}
+
+.model-profile-header p {
+  color: #999;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.model-profile-height {
+  margin-bottom: 65px;
+}
+
+.model-profile-height span {
+  color: #d6c5a5;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.model-profile-height h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(65px, 9vw, 100px);
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.model-profile-height small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #d6c5a5;
+  letter-spacing: 3px;
+}
+
+.measurements-grid {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(214, 197, 165, 0.25);
+  border-left: 1px solid rgba(214, 197, 165, 0.25);
+}
+
+.measurement-item {
+  padding: 35px 15px;
+  border-right: 1px solid rgba(214, 197, 165, 0.25);
+  border-bottom: 1px solid rgba(214, 197, 165, 0.25);
+}
+
+.measurement-item span {
+  display: block;
+  color: #d6c5a5;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.measurement-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .model-profile {
+    padding: 90px 7%;
+  }
+
+  .model-profile-header {
+    margin-bottom: 50px;
+  }
+
+  .model-profile-height {
+    margin-bottom: 45px;
+  }
+
+  .measurements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .measurement-item {
+    padding: 28px 10px;
+  }
+
+  .measurement-item h3 {
+    font-size: 24px;
+  }
+}
