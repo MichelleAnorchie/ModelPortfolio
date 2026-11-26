@@ -2,7 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import PortfolioGallery from './components/PortfolioGallery'
+import Gallery from './components/Gallery'
 import About from './components/About'
 import ModelProfile from './components/ModelProfile'
 import Contact from './components/Contact'
@@ -15,7 +15,7 @@ function App() {
 
       <Hero />
 
-      <PortfolioGallery />
+      <Gallery />
 
       <About />
 

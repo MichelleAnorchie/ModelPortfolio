@@ -53,6 +53,10 @@ main {
   color: #d6c5a5;
 }
 
+.nav-links a.active {
+  color: #d6c5a5;
+}
+
 .booking-link {
   display: flex;
   align-items: center;
