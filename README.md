@@ -166,8 +166,8 @@ ModelPortfolio/
 │   │   ├── Hero.tsx
 │   │   ├── ModelProfile.tsx
 │   │   ├── Navbar.tsx
-│   │   ├── PortfolioGallery.tsx
-│   │   └── PortfolioGallery.css
+│   │   ├── Gallery.tsx
+│   │   └── Gallery.css
 │   │
 │   ├── App.css
 │   ├── App.tsx

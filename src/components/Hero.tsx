@@ -49,7 +49,7 @@ export default function Hero() {
             through the art of modelling.
           </p>
 
-          <a href="#portfolio" className="explore-link">
+          <a href="#gallery" className="explore-link">
             EXPLORE MY WORK <ArrowDown size={16} />
           </a>
         </motion.div>
