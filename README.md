@@ -54,8 +54,9 @@ The website combines an elegant editorial-inspired design with interactive compo
 
 ## Screenshots
 
-*Screenshots of the application will be added here to demonstrate the website’s desktop and mobile interfaces.*
+### Full Website
 
+![Full Website Screenshot](screenshots/full-page-website.png)
 ---
 
 ## Technology Stack
